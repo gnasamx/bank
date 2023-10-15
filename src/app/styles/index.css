@@ -2,8 +2,15 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@import "form";
+@import "theme";
+
 body {
+  @apply text-sm;
+  @apply text-primary;
+  @apply bg-primary;
   @apply antialiased;
+  font-weight: 460;
 
   letter-spacing: 0.000001px;
 }

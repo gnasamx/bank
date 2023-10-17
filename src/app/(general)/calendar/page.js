@@ -1,10 +1,11 @@
 import TextField from "@/components/ui/text-field";
 
-export default function Home() {
+export default function CalendarPage() {
   return (
-    <main className="flex flex-col w-full h-full p-4 space-y-4">
+    <main className="flex flex-col w-full h-full space-y-4">
+      <h3 className="text-xl font-semibold mb-5">General</h3>
       <TextField
-        label="Custom link"
+        label="On calendar"
         name="custom-link"
         placeholder="https://github.com/gnasamx"
         description="Your custom video link. It'll be available in the event location."

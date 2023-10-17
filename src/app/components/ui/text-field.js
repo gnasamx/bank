@@ -9,6 +9,7 @@ const TextField = forwardRef(
       id,
       name,
       type = "text",
+      placeholder,
       className,
       helpText,
       ...rest
@@ -27,9 +28,9 @@ const TextField = forwardRef(
           autoComplete="off"
           autoCorrect="off"
           autoCapitalize="none"
+          placeholder={placeholder}
           className={cn(
-            // "focus-ring w-full rounded border border-secondary px-1.5 py-sm text-base text-primary shadow-sm ring-offset-0",
-            "focus-ring mt-5 w-full rounded-lg px-3 py-3 text-primary bg-secondary shadow-sm ring-offset-0",
+            "mt-5 w-full rounded-lg px-3 py-3 text-primary outline-none bg-secondary shadow-sm ring-offset-0 hover:bg-tertiary focus:bg-tertiary transition-colors",
             className
           )}
           {...rest}

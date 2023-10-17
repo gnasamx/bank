@@ -117,7 +117,7 @@ module.exports = {
       backgroundColor: {
         primary: "rgb(var(--bg-primary))",
         secondary: "rgb(var(--bg-secondary))",
-        // tertiary: "rgb(var(--bg-tertiary))",
+        tertiary: "rgb(var(--bg-tertiary))",
       },
       borderColor: {
         secondary: "rgb(var(--border-secondary))",

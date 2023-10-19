@@ -2,10 +2,6 @@ import { clsx as cn } from "clsx";
 import Link from "next/link";
 import { forwardRef } from "react";
 
-/**
- * primary - gray, accent - green, outlined - white with border, danger - red
- */
-
 const Button = forwardRef(
   (
     {
@@ -25,8 +21,10 @@ const Button = forwardRef(
     },
     forwardedRef,
   ) => {
-    const primary = variant !== "secondary" && variant !== "danger";
-    const secondary = variant === "secondary";
+    const primary =
+      variant !== "accent" && variant !== "danger" && variant !== "outlined";
+    const outlined = variant === "outlined";
+    const accent = variant === "accent";
     const danger = variant === "danger";
 
     const Element = href ? Link : "button";
@@ -44,7 +42,8 @@ const Button = forwardRef(
         className={buttonClasses({
           className,
           primary,
-          secondary,
+          outlined,
+          accent,
           danger,
           disabled,
           iconOnly,
@@ -61,7 +60,8 @@ const Button = forwardRef(
 export function buttonClasses({
   className,
   primary,
-  secondary,
+  accent,
+  outlined,
   danger,
   disabled,
   iconOnly,
@@ -72,17 +72,16 @@ export function buttonClasses({
   const regular = size === "regular";
   const large = size === "large";
 
-  // appearance-none scale-100 transition-transform active:scale-[0.98] flex h-9 items-center rounded-lg border border-gray-200 px-4 text-s font-semibold transition-colors hover:bg-gray-200 dark:border-gray-600 dark:hover:bg-gray-600
-  // appearance-none scale-100 transition-transform active:scale-[0.98] flex h-full shrink-0 items-center px-4 text-s font-semibold transition-colors rounded-l-lg
-
   return cn(
     className,
     "appearance-none scale-100 transition-transform active:scale-[0.98] rounded-lg text-s font-medium transition-colors",
     {
-      "bg-green-600 hover:bg-green-500 dark:bg-green-600 dark:hover:bg-green-500 text-white":
-        primary && !disabled,
       "bg-gray-100 hover:bg-gray-200 dark:bg-gray-750 dark:hover:bg-gray-700":
-        secondary && !disabled,
+        primary && !disabled,
+      "border border-gray-200 hover:bg-gray-200 dark:border-gray-600 dark:hover:bg-gray-600":
+        outlined && !disabled,
+      "bg-green-600 hover:bg-green-500 dark:bg-green-600 dark:hover:bg-green-500 text-white":
+        accent && !disabled,
       "bg-red-500 hover:bg-red-400 dark:bg-red-500/80 dark:hover:bg-red-500/90  text-white":
         danger && !disabled,
       "px-4 py-2": regular,

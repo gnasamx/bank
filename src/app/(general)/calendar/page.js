@@ -2,8 +2,8 @@ import TextField from "@/components/ui/text-field";
 
 export default function CalendarPage() {
   return (
-    <main className="flex flex-col w-full h-full space-y-4">
-      <h3 className="text-xl font-semibold mb-5">General</h3>
+    <main className="flex h-full w-full flex-col space-y-4">
+      <h3 className="mb-5 text-xl font-semibold">General</h3>
       <TextField
         label="On calendar"
         name="custom-link"

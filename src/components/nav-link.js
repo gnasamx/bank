@@ -8,10 +8,10 @@ export default function NavLink({ label, href }) {
   return (
     <Link
       href={href}
-      className="appearance-none scale-100 transition-transform active:scale-[0.98]"
+      className="scale-100 appearance-none transition-transform active:scale-[0.98]"
     >
-      <div className="group relative my-0.5 flex items-center rounded-lg px-2 py-1.5 text-left text-sm font-medium transition-colors text-secondary hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800">
-        <div className="mr-2 transition-colors text-gray-600 dark:text-gray-300">
+      <div className="group relative my-0.5 flex items-center rounded-lg px-2 py-1.5 text-left text-sm font-medium text-secondary transition-colors hover:bg-gray-100 hover:text-primary dark:hover:bg-gray-800">
+        <div className="mr-2 text-gray-600 transition-colors dark:text-gray-300">
           {label === "General" ? (
             <GeneralIcon />
           ) : label === "Savings" ? (

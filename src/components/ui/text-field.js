@@ -14,12 +14,12 @@ const TextField = forwardRef(
       helpText,
       ...rest
     },
-    forwardedRef
+    forwardedRef,
   ) => {
     return (
       <fieldset>
         {label && <label htmlFor={id || name}>{label}</label>}
-        {description && <p className="text-secondary mt-1">{description}</p>}
+        {description && <p className="mt-1 text-secondary">{description}</p>}
         <input
           ref={forwardedRef}
           id={id || name}
@@ -30,14 +30,14 @@ const TextField = forwardRef(
           autoCapitalize="none"
           placeholder={placeholder}
           className={cn(
-            "mt-5 w-full rounded-lg px-3 py-3 text-primary outline-none bg-secondary shadow-sm ring-offset-0 hover:bg-tertiary focus:bg-tertiary transition-colors",
-            className
+            "mt-5 w-full rounded-lg bg-secondary px-3 py-3 text-primary shadow-sm outline-none ring-offset-0 transition-colors hover:bg-tertiary focus:bg-tertiary",
+            className,
           )}
           {...rest}
         />
       </fieldset>
     );
-  }
+  },
 );
 
 TextField.displayName = "TextField";

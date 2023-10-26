@@ -109,6 +109,9 @@ module.exports = {
       fontFamily: {
         sans: ["Inter var", ...fontFamily.sans],
       },
+      fontSize: {
+        xs: "13px",
+      },
       textColor: {
         primary: "rgb(var(--text-primary))",
         secondary: "rgb(var(--text-secondary))",
@@ -121,6 +124,11 @@ module.exports = {
       },
       borderColor: {
         secondary: "rgb(var(--border-secondary))",
+        separator: "rgb(var(--border-separator))",
+      },
+      boxShadow: {
+        feint:
+          "0 1px 2px 0px rgba(0, 0, 0, 0.04), 0 2px 6px 0 rgba(0, 0, 0, 0.08)",
       },
     },
   },

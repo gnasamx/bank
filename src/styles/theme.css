@@ -94,6 +94,7 @@
   --bg-secondary: var(--gray-100);
   --bg-tertiary: var(--gray-150);
   --border-secondary: var(--gray-200);
+  --border-separator: var(--gray-100);
 }
 
 .dark {
@@ -104,4 +105,5 @@
   --bg-secondary: var(--gray-800);
   --bg-tertiary: var(--gray-750);
   --border-secondary: var(--gray-800);
+  --border-separator: var(--gray-800);
 }

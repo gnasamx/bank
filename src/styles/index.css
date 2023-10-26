@@ -21,3 +21,12 @@ body {
   font-weight: 460;
   letter-spacing: 0.000001px;
 }
+
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hidden-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

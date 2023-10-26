@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import AccountsIcon from "./icons/accounts";
+import ActivitiesIcon from "./icons/activities";
 import GeneralIcon from "./icons/general";
 import SavingsIcon from "./icons/savings";
 
@@ -14,8 +16,12 @@ export default function NavLink({ label, href }) {
         <div className="mr-2 text-gray-600 transition-colors dark:text-gray-300">
           {label === "General" ? (
             <GeneralIcon />
-          ) : label === "Savings" ? (
+          ) : label === "Transactions" ? (
             <SavingsIcon />
+          ) : label === "Accounts" ? (
+            <AccountsIcon />
+          ) : label == "Activities" ? (
+            <ActivitiesIcon />
           ) : (
             "?"
           )}

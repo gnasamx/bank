@@ -1,7 +1,6 @@
 label {
   @apply block;
   @apply text-primary;
-  @apply text-base;
   @apply font-semibold;
 }
 
